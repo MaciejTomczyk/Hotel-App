@@ -1,0 +1,40 @@
+  <html lang="en">
+<head>
+<title>Hotel App</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="container">
+  <header>
+        <% include ../partials/header %>
+    </header>
+<h1><%= name %></h1>
+<h2>Available Rooms:</h2>
+    <% rooms.forEach(function(room) { %>
+    <%if (room.booked == false) { %>
+        <form class="form-inline" action="/book/<%= room.hotelname %>/<%= room.roomnumber %>" method="post">
+  		<div class="form-group">
+        <%= room.roomnumber %> - <%= room.roomtype %> - <%= room.side %>
+       	<input type="text" name="numberofnights" class="form-control" value="1" placeholder="Number of nights">
+        <button type="submit" class="btn btn-success">Book!</button>
+        </div>
+        </form>
+    <% } %>
+    <% }); %>
+    
+<h2>Booked Rooms:</h2>
+    <% rooms.forEach(function(room) { %>
+    <%if (room.booked == true) { %>
+        <form class="form-inline" action="/cancel/<%= room.hotelname %>/<%= room.roomnumber %>" method="post">
+  		<div class="form-group"><%= room.roomnumber %> -<%= room.roomtype %> - <%= room.side %> 
+  		Booked until: <%=room.bookeduntil.toString().substr(4,21) %>
+        <button type="submit" class="btn btn-warning">Cancel!</button>
+        </div>
+        </form>
+    <% } %>
+    <% }); %>
+    
+</body>

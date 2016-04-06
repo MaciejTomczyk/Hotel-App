@@ -1,0 +1,16 @@
+//var HotelA = new Hotel({name: "HotelA",location: "Gdansk"});
+//var HotelB = new Hotel({name: "HotelB",location: "Warszawa"});
+//HotelA.save();
+//HotelB.save();
+//var Room1 = new Room({roomnumber: 101,hotelname: 'HotelA',roomtype:'StandardRoom',side:'North'});
+//var Room2 = new Room({roomnumber: 102,hotelname: 'HotelA',roomtype:'SpecialRoom',side:'West'});
+//var Room3 = new Room({roomnumber: 103,hotelname: 'HotelA',roomtype:'ExclusiveRoom',side:'South'});
+//var Room4 = new Room({roomnumber: 101,hotelname: 'HotelB',roomtype:'StandardRoom',side:'East'});
+//var Room5 = new Room({roomnumber: 102,hotelname: 'HotelB',roomtype:'SpecialRoom',side:'West'});
+//var Room6 = new Room({roomnumber: 103,hotelname: 'HotelB',roomtype:'ExclusiveRoom',side:'North'});
+//Room1.save();
+//Room2.save();
+//Room3.save();
+//Room4.save();
+//Room5.save();
+//Room6.save();
